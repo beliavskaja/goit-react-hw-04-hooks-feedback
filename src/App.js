@@ -20,17 +20,19 @@ export default function App() {
     return Math.round(percentage);
   };
 
-  const handleFeedback = (option) => {
-    if (option === "good") {
+  function handleFeedback(options) {
+    switch(options) {
+    case "good": 
       setGood(good + 1);
-    }
-    if (option === "neutral") {
+      break;
+    case "neutral":
       setNeutral(neutral + 1);
-    }
-    if (option === "bad") {
+      break;
+    case "bad":
       setBad(bad + 1);
-    }
-  };
+      break;
+  }
+};
 
   return (
     <>
